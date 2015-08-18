@@ -14,4 +14,4 @@ test:
     # Wait for app to be ready
     - curl --retry 10 --retry-delay 2 -v http://localhost:5000
     # Run selenium tests
-    - nosetests --with-xunit
+    - nosetests --with-xunit --xunit-file=$CIRCLE_TEST_REPORTS/nosetests.xml
